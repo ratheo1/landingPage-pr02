@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
+#all{
+    height: 30px;
+    animation-name: moveUp;
+    animation-duration: 0.2s;
+}
+
+@keyframes moveUp{
+    from{
+        height: 130px;
+    }
+    to{
+        height: 30px;
+    }
+}
+
+#active{
+    animation-name: moveDown;
+    animation-duration: 0.2s
+}
+
+@keyframes moveDown{
+    from{
+        height: 30px
+    }
+    to{
+        height: 130px
+    }
+}
+
+#hidden{
+    transform: translateX(-300px);
+    animation-name: slide-hide;
+    animation-duration: 0.5s
+}
+
+@keyframes slide-hide{
+    from{
+        transform: translateX(0px)
+    }
+    to{
+        transform: translateX(-300px)
+    }
+}
+
+#block{
+    animation-name: slide;
+    animation-duration: 0.5s;
+}
+
+.notscroll{
+    overflow: hidden
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(-300px)
+    }
+    to{
+        transform: translateX(0px)
+    }
+}
+
+#none{
+    display: none
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
